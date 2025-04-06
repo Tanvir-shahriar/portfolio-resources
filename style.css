@@ -204,6 +204,9 @@ footer{
     display: flex;
     gap: 100px;
 }
+footer .section-description{
+    margin-bottom: 30px;
+}
 .footer-column{
     width: 50%;
 }
