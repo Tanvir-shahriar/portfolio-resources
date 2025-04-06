@@ -18,7 +18,9 @@
   .dark-2{
     color: #474747;
 }
-
+    .dark-3{
+        color: #757575;
+    }
 .secondary-bg{
     background-color: #FFF8F3;}
 
@@ -103,9 +105,8 @@ nav li a{
 main{
     max-width: 1140px;
     margin: 0 auto;
-    padding: 130px 155px;
-    
-    
+    padding: 100px 155px; 
+    margin-top: 50px;
 }
 
 /* about section */
@@ -114,7 +115,6 @@ main{
     text-align: center;
     /* margin-top: 130px; */
     margin-bottom: 130px;
-
 }
 .about-items{
     display: flex;
@@ -129,6 +129,92 @@ main{
 /* what i do section */
 .experience{
     text-align: center;
-    margin-top: 260px;
+    
 }
 
+.skills-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+.skills-container .skill{
+    /* background-color: #FFFFFF; */
+    box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+    padding: 90px auto 90px auto;
+}
+
+/* resume section styles */
+.resume{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 200px;
+}
+
+.resume-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px 0;
+}
+
+.resume-container .resume-column {
+    flex: 1 1 45%;
+    background-color: #FFF8F3;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.resume-column .column-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.resume-column .experience {
+    margin-bottom: 20px;
+}
+
+.experience-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.experience-subtitle {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.experience-description {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.resume hr{
+    margin: 30px 0;
+}
+
+/* footer styles */
+footer{
+    padding: 130px 230px;
+    display: flex;
+    gap: 100px;
+}
+.footer-column{
+    width: 50%;
+}
+footer input[type="text"], footer input[type="email"], footer textarea{
+    font-family: "Open Sans", sans-serif;
+    height: 64px;
+    border-radius: 5px;
+    background-color: #FFF8F3;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    width: 100%;
+}
