@@ -319,7 +319,7 @@ footer input[type="text"], footer input[type="email"], footer textarea{
       padding: 40px 20px;
     }
   
-    .resume-column{
+    .resume-container{
       margin-left: auto;
       margin-right: auto;
     }
