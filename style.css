@@ -42,50 +42,68 @@
     color: #757575;
     font-size: 18px;
 }
-
+/* global styles */
 /* header */
-.header{
+.header {
     background-image: url(images/developer.png), url(images/header_bg.png);
     background-repeat: no-repeat;
     background-position: top left, bottom right;
+    padding: 40px 20px;
 }
 
-  nav{
+/* navigation */
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 50px 200px;
-  }
-  .nav-title{
-    font-weight: 800px;
-    font-size: 45px;
-  }
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-nav ul{
+.nav-title {
+    font-weight: 800;
+    font-size: 45px;
+}
+
+/* navigation links */
+nav ul {
     display: flex;
     align-items: center;
-    
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
-    margin-right: 50px;
 }
 
-nav li a{
+nav li a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* banner styles */
-.banner{
+.banner {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 50px auto 0;
+    gap: 40px;
 }
-.banner-content{
-    max-width: 500px;
-    margin: 0 38px 0 230px;
+
+.banner-content {
+    max-width: 600px;
+}
+
+.banner-profile-pic {
+    width: 400px;
+    max-width: 100%;
 }
 .banner-greetings{
     font-size: 45px;
@@ -98,9 +116,7 @@ nav li a{
 .banner-description{
     margin-bottom: 20px;
 }
-.banner-profile-pic{
-    width: 580px;
-}
+
 /* main styles */
 main{
     max-width: 1140px;
@@ -229,119 +245,75 @@ footer input[type="text"], footer input[type="email"], footer textarea{
     margin-bottom: 20px;
     width: 100%;
 }
-/* Responsive styles */
-@media screen and (max-width: 1200px) {
+
+/* hides the section */
+.hide{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    
+    /* main styles */
+    main{
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    /* header */
     nav {
-      margin: 40px 100px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin: 0;
     }
-  
-    .banner-content {
-      margin: 0 20px;
+
+    nav ul {
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
     }
-  
-    main {
-      padding: 80px 50px;
-    }
-  
-    footer {
-      padding: 80px 50px;
-      flex-direction: column;
-      gap: 50px;
-    }
-  
-    .footer-column {
-      width: 100%;
-    }
-  }
-  
-  @media screen and (max-width: 992px) {
-    nav {
-      flex-direction: column;
-      gap: 20px;
-      margin: 30px 50px;
-    }
-  
-    .banner {
-      flex-direction: column-reverse;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .banner-profile-pic {
-      width: 300px;
-      margin-top: 20px;
-    }
-  
-    .skills-container {
-      flex-direction: column;
-      gap: 30px;
-    }
-  
-    .about-items {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-  
-    .resume-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .resume-container .resume-column {
-      width: 100%;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
+
     .nav-title {
-      font-size: 32px;
+        font-size: 36px;
     }
-  
-    nav ul li {
-      margin-right: 20px;
+
+    .banner {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
     }
-  
-    .btn-primary {
-      padding: 14px 25px;
-      font-size: 16px;
+
+    .banner-content {
+        align-items: center;
+        max-width: 100%;
     }
-  
-    .banner-title {
-      font-size: 42px;
+
+    .banner-profile-pic {
+        width: 80%;
     }
-  
-    .banner-greetings {
-      font-size: 28px;
+    
+    /* skills */
+    .skills-container{
+        flex-direction: column;
+        align-items: center;
     }
-  
-    .skills-container .skill {
-      padding: 40px 20px;
+
+    /* footer section */
+    footer{
+        padding: 50px 20px;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
     }
-  
-    .resume-container{
-      margin-left: auto;
-      margin-right: auto;
+    .footer-column{
+        width: 100%;
     }
-    .resume-column .column-title {
-      font-size: 22px;
+
+/* about items */
+    .about-items{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
-  
-    .experience-title {
-      font-size: 18px;
-    }
-  
-    .experience-subtitle,
-    .experience-description {
-      font-size: 14px;
-    }
-  
-    footer input[type="text"], 
-    footer input[type="email"], 
-    footer textarea {
-      font-size: 16px;
-      height: auto;
-      padding: 12px 15px;
-    }
-  }
-  
+}
